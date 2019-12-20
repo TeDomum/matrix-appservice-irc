@@ -35,6 +35,7 @@ COPY --from=builder /build/node_modules /app/node_modules
 COPY --from=builder /build/lib /app/lib
 
 COPY app.js /app/
+COPY config.schema.yml /app/
 COPY docker /app/docker
 
 ENV LD_PRELOAD /app/libfreebindfree.so
